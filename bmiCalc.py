@@ -1,9 +1,12 @@
-print("Body-mass-index calculator, by Jason")
+print("Body-mass-index calculator")
 
-weight = float(input("Please enter your weight in kgs:"))
-height = float(input("Please enter your height in m:"))
+def main():
+    weight = float(input("Please enter your weight in kgs:"))
+    height = float(input("Please enter your height in m:"))
+    print('Therefore, your BMI value is: {:,.2f}'.format(calculating_BMI(weight,height)))
+    print('Thank you!')
 
-body_mass_index = weight / (height * height)
+def calculating_BMI(weight,height):
+    return weight / (height * height)
 
-print('Therefore, your BMI value is:', body_mass_index)
-print('Thank you!')
+main()
