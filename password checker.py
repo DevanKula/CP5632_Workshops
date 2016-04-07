@@ -20,9 +20,9 @@ for c in password:
     elif c in SPECIAL_CHARACTER:
         specials += 1
 
-while lowers < 1:# or higher < 1: #or 1 < numbers or 1 < special or len(password) < MIN_PASSWORD_LENGTH or len(password)> MAX_PASSWORD_LENGTH:
+while lowers < 1 or highers < 1 or 1 < numbers or 1 < specials or len(password) < MIN_PASSWORD_LENGTH or len(password)> MAX_PASSWORD_LENGTH:
     print("Invalid password!")
-    #print(lower,numbers,special,higher)
+    print(lowers,numbers,specials,highers)
     password = input()
 else:
     print("Your",len(password), "character password is valid:", password)
