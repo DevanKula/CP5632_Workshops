@@ -1,12 +1,30 @@
 import random
 
-#print(random.randint(5, 20))
-#print(random.randrange(3, 10 ,2))
-#print(random.uniform(2.5,5.5))
-
-lotto_numbers = []
-picks = int((input("How many quick picks?")))
+picks = int(input("How many quick picks?"))
 
 for pick in range(picks):
-    #lotto_numbers.append(pick)
-    print(random.randrange(1,45,picks))
+    lotto_numbers = []
+    for i in range(6):
+        new_num = random.randint(1,45)
+        while new_num in lotto_numbers:
+            new_num = random.randint(1,45)
+        lotto_numbers.append(new_num)
+        lotto_numbers.sort()
+    for number in lotto_numbers:
+        print("{:2}".format(number), end=' ')
+    print()
+
+
+
+
+
+
+
+
+#    lotto_numbers.append(random.randrange(1,45,1))
+#    print(lotto_numbers)
+#lotto_numbers = []
+#picks = int((input("How many quick picks?")))
+
+#for pick in range(picks):
+#    print(random.randint(1,45))'''

@@ -9,8 +9,8 @@ def main():
     INITIAL_PRICE = 10.0
     day = 0
     price = INITIAL_PRICE
-    print("Starting price", end=' ')
-    format_currency(price)
+    print("Starting price {}".format(format_currency(price)))
+
 
     while MIN_PRICE <= price <= MAX_PRICE:
         priceChange = 0
@@ -20,9 +20,9 @@ def main():
         else:
             priceChange =  random.uniform(-MAX_DECREASE, 0)
         price *= (1 + priceChange)
-        print("On day {} price is ".format(day), end=' ')
-        format_currency(price)
+        print("On day {} price is {}".format(day,format_currency(price)))
+
 
 def format_currency(value):
-    return print('${:,.2f}'.format(value))
+    return '${:,.2f}'.format(value)
 main()
