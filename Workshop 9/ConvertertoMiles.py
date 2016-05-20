@@ -3,7 +3,6 @@ from kivy.lang import Builder
 
 CONVERSION = 1.60934
 
-
 class Convert_to_Miles(App):
     def build(self):
         self.title = "Convert Miles to Kilometers"
